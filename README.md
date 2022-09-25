@@ -1,11 +1,11 @@
 # Movie-Rating-Analysis
 
-Analyzing the rating given by viewers of a movie helps many people decide whether or not to watch that movie. So, for the Movie Rating Analysis task, we first need to have a dataset that contains data about the ratings given by each viewer. For this task, I have collected a dataset from Kaggle that contains two files:
+Many individuals decide if they want to watch a movie based on the ratings offered by viewers. So, for the Movie Rating Analysis, we must first need to have a dataset including data about the ratings given by each viewer. I have used two files from Kaggle.
 
 1. Movie file that contains the data about the movie Id, title and the genre of the movie 
 2. Ratings file that contains the user id, movie id, ratings given by the user and the timestamp of the ratings
 
-Now let’s get started with the task of movie rating analysis by importing the necessary Python libraries and the datasets:
+Importing the required Python libraries and datasets:
 ```python
 import numpy as np
 import pandas as pd
