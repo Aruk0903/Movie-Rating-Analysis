@@ -12,6 +12,8 @@ import pandas as pd
 movies = pd.read_csv("movies.dat", delimiter='::')
 print(movies.head())
 ```
+![image](https://user-images.githubusercontent.com/89111546/192160490-047dbe1b-6067-4c5a-829b-1b48f9425769.png)
+
 In the above code, I have only imported the movies dataset that does not have any column names, so let’s define the column names:
 
 ```python
