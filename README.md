@@ -2,8 +2,8 @@
 
 Many individuals decide if they want to watch a movie based on the ratings offered by viewers. So, for the Movie Rating Analysis, we must first need to have a dataset including data about the ratings given by each viewer. I have used two files from Kaggle.
 
-1. Movie file that contains the data about the movie Id, title and the genre of the movie 
-2. Ratings file that contains the user id, movie id, ratings given by the user and the timestamp of the ratings
+1. Movies file that contains the data about the movie Id, the title of the movie and the genre of the movie.
+2. Ratings file that contains the user id, movie id, ratings given by each user along with the timestamp.
 
 Importing the required Python libraries and datasets:
 ```python
@@ -14,7 +14,7 @@ print(movies.head())
 ```
 ![image](https://user-images.githubusercontent.com/89111546/192160490-047dbe1b-6067-4c5a-829b-1b48f9425769.png)
 
-In the above code, I have only imported the movies dataset that does not have any column names, so let’s define the column names:
+The movies dataset does not have column names, so let’s define the column names:
 
 ```python
 movies.columns = ["ID", "Title", "Genre"]
@@ -29,14 +29,14 @@ print(ratings.head())
 ```
 ![image](https://user-images.githubusercontent.com/89111546/192160568-11749962-9a4f-428a-9edc-0fc3032174b9.png)
 
-The rating dataset also doesn’t have any column names, so let’s define the column names of this data too:
+The rating dataset also does not have any column names, so let’s define the column names here too:
 ```python
 ratings.columns = ["User", "ID", "Ratings", "Timestamp"]
 print(ratings.head())
 ```
 ![image](https://user-images.githubusercontent.com/89111546/192160589-e8df208f-9edd-4e65-b8b7-ce99de50903c.png)
 
-Now lets merge these two datasets into one, these two datasets have a common column as ID, which contains movie ID, so we can use this column as the common column to merge the two datasets:
+Now lets merge these two datasets into one, these two datasets have a common column as ID, which contains movie ID, so we can use this column to merge the two datasets:
 ```python
 data = pd.merge(movies, ratings, on=["ID", "ID"])
 print(data.head())
